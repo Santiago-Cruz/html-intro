@@ -4,73 +4,274 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="doc.css">
+    <link rel="stylesheet" type="text/css" href="cod.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
     <title>Hoja_de_vida</title>
 </head>
 <body>
-    <h1> Santiago Forero contact information</h1>
-    <ul>
-        <li>sforerocr@hotmail.com </li>
-        <li>(+57)315 3607024 </li>
-        <li>CO, Tunja, Boyaca </li>
-        <li><a href="https://github.com/Santiago-Cruz">GitHub profile</a> </li>  
-    </ul>
-    <h2>Job experience</h2>
-    <ul>
-        <li>Teleperformance: Bilingual phone advisor (Jun 2021 - Dec 2022) </li>
-        <li>Interpretia: Bilingial interpreter (Jan 20 - still going)</li>
-
-    </ul>
-    <h3>Technical abilities</h3>
-    <table>
-        <tr>
-            <th>FRONTEND</th>
-            <th>BACKEND</th>
-        </tr>
-        <tr>
-            <td>
-                <ol>
-                    <li>Javascript</li>
-                    <li>Fetch</li>
-                    <li>DOM</li>
-                    <li>React</li>
-                </ol>
-            </td>
-            <td>
-                <ol>
-                    <li>SQL</li>
-                    <li>Node.js</li>
-                    <li>ExpressJS</li>
-                    <li>Deployment</li>
-                </ol>
-            </td>
-        </tr>
-    </table>
-    <ul>
-        <li>
-            Certified english level (C1) 
-        </li>
-    </ul>
-    <h3>Interests</h3>
-    <table>
-        <tr>
-            <th>Specific interests</th>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li> Artificial inteligence</li>
-                    <li> Software development intended to video games</li>
-                    <li> Knowledge on TICs</li>
+    <!-- HEADER -->
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar">
+            
+            <input type="checkbox" aria-label="Checkbox para mostrar y quitar hamburger menu"
+                class="checkbox xl:hidden">
+            <div class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">About Me</li>
+                    <li onclick="scrollToSection('services')">Services</li>
+                    <li onclick="scrollToSection('contact')">Contact</li>
                 </ul>
-            </td>
-        </tr>
-    </table>
-    <h4>Contact me</h4>
-    <p>Send me a brief message specifying your email address and inquiry,
-        i will be glad to get in touch with you ASAP :)
-    </p>
-    <input type="text" id="Name"  placeholder="Feel free to type">
-    <button name="button">Send</button>
+                <div class="hireMe__button pt-4">
+                    <a href="mailTo:sforerocr@hotmail.com" aria-label="Send email"
+                        class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Hire me</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--HOME PAGE -->
+
+    <div class="container">
+        <section id="home"
+            class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+            <div class="left__content col-12 xl:col-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>Hey, allow me to introduce myself</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Mr. Santiago Cruz</h1>
+                <p class="text-gray-500">
+                    Full Stack Web developer.
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./assets/CURRICULUM.pdf" aria-label="Download curriculum"
+                        class="cursor-pointer border-round-lg no-underline" download>Download CV</a>
+                </div>
+            </div>
+            <div class="right__content col-9 sm:col-6 xl:col-5">
+                <img src="./assets/foto-perfil.png" alt="Pro pic" width="100" height="100">
+            </div>
+        </section>
+        <!--ABOUT ME-->
+        <section id="about" class="about__me w-full min-h-screen flex align-items-center">
+            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+                <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+                    <h1 class="text-3xl md:text-5xl">About Me</h1>
+                    <p class="text-gray-500">My passion for teaching mathematics and geometry has given me the 
+                        opportunity to work with students of different ages and levels. I am confident in my ability 
+                        to adapt my teaching methods to meet the needs of each individual student, and I take pride in 
+                        seeing my students improve their skills and achieve their academic goals.
+                        Furthermore, my experience working in bilingual call centers and as an interpreter has 
+                        allowed me to develop strong communication skills and the ability to work in fast-paced environments 
+                        while maintaining accuracy and attention to detail.</p>
+                    <div class="knowledge flex flex-column gap-3 mt-5">
+                        <p>Javascript 100%</p>
+                        <div class="progress__bar progress__javascript">
+                            <span></span>
+                        </div>
+                        <p>HTML 75%</p>
+                        <div class="progress__bar progress__html">
+                            <span></span>
+                        </div>
+                        <p>Fetch 80%</p>
+                        <div class="progress__bar progress__fetch">
+                            <span></span>
+                        </div>
+                        <p>React 95%</p>
+                        <div class="progress__bar progress__react">
+                            <span></span>
+                        </div>
+                        <p>DOM 35%</p>
+                        <div class="progress__bar progress__dom">
+                            <span></span>
+                        </div>
+                        <p>SQL 75%</p>
+                        <div class="progress__bar progress__sql">
+                            <span></span>
+                        </div>
+                        <p>Node.js 95%</p>
+                        <div class="progress__bar progress__node">
+                            <span></span>
+                        </div>
+                        
+                        <p>ExpressJS 80%</p>
+                        <div class="progress__bar progress__expressjs">
+                            <span></span>
+                        </div>
+                        
+                        <p>Deployment 65%</p>
+                        <div class="progress__bar progress__deployment">
+                            <span></span>
+                        </div>
+                        <p>English level 90%</p>
+                        <div class="progress__bar progress__englishlevel">
+                            <span></span>
+                        </div>
+
+                    </div>
+                    <div class="hireMe__button pt-4">
+                        <a href="mailTo:sforerocr@hotmail.com" aria-label="Enviar mensaje al correo"
+                            class="cursor-pointer no-underline border-round-lg">Contratame</a>
+                    </div>
+
+                </div>
+                <div class="image col p-0 mt-6 md:mt-0">
+                    <img src="./assets/freelancer.jpg" alt="Foto relacionado a acerca de mí" width="100" height="100">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!--FREE LANCER SECTION -->
+    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+        <p class="text-sm">Are you willing to start a project?</p>
+        <h1 class="text-center">Im available as a freelancer</h1>
+        <div class="hireMe__button pt-4">
+            <a href="mailTo:sforerocr@hotmail.com" aria-label="Send email"
+                class="cursor-pointer no-underline border-round-lg">Text me</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="services" class="services min-h-full w-full pb-7">
+            <div class="services__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">My services</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    I count with advanced knowledge and experience working in:
+                </p>
+            </div>
+            <div class="services__card w-full grid grid-nogutter mt-7 gap-5">
+                <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>HTML</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>SQL</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-angular"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>React Js</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Web development Front End</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Web Development Back End</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--FOOTER -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h3>Social media</h3>
+                <p>Here for your needs</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Ir a facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Ir a instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="Ir a linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contact</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+57 3153607024</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>sforerocr@hotmail.com</p>
+                </div>
+                <a href="mailTo:sforerocr@hotmail.com"
+                    class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Text me
+                </a>
+            </div>
+            <div class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>My services</h3>
+                <p>Web development Front End</p>
+                <p>Web development Back End</p>
+                <p>HTML</p>
+                <P>Monitoring</P>
+            </div>
+        </footer>
+        
+    </div>
+    
+
 </body>
+
+<script>
+    const filterContainer = document.querySelector(".gallery__categories");
+    const galleryItems = document.querySelectorAll(".project__card");
+
+    filterContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("filter-item")) {
+            filterContainer.querySelector(".active").classList.remove("active");
+            event.target.classList.add("active")
+            const filterValue = event.target.getAttribute("data-filter")
+            galleryItems.forEach(item => {
+                if (item.classList.contains(filterValue) || filterValue === "all") {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
+                } else {
+                    item.classList.remove("show")
+                    item.classList.add("hide")
+                }
+            })
+        }
+    })
+
+    function scrollToSection(sectionId){
+        document.getElementById(sectionId).scrollIntoView({behavior:"smooth"})
+    }
+</script>
+
 </html>
